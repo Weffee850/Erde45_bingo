@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Bingo Game</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; }
+    #board { display: grid; grid-template-columns: repeat(5, 60px); gap: 10px; margin: 20px auto; width: max-content; }
+    .cell { width: 60px; height: 60px; display: flex; align-items: center; justify-content: center;
+            border: 1px solid #333; cursor: pointer; user-select: none; }
+    .marked { background-color: #90ee90; }
+  </style>
+</head>
+<body>
+  <h1>Bingo Game</h1>
+  <div id="board"></div>
+  <script src="game.js"></script>
+</body>
+</html>
