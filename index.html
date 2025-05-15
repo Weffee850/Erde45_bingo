@@ -1,48 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Bingo Game</title>
-  <link rel="stylesheet" href="style.css">
-  <style>body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f5f5f5;
-}
-
-#bingo-card {
-  display: grid;
-  grid-template-columns: repeat(5, 60px);
-  gap: 10px;
-  justify-content: center;
-  margin: 20px auto;
-}
-
-.cell {
-  width: 60px;
-  height: 60px;
-  background-color: white;
-  border: 2px solid #333;
-  line-height: 60px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.marked {
-  background-color: gold;
-}
-
-button {
-  padding: 10px 20px;
-  font-size: 16px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bingo Game</title>
 </head>
 <body>
-  <h1>Bingo Game</h1>
-  <div id="bingo-card"></div>
-  <button id="generate-number">Draw Number</button>
-  <p id="drawn-number"></p>
-  <script src="script.js"></script>
+    <h5><img src="images/Bingo.png" class="image"></h5>
+    <div >
+        <button class="btn" id="start-button">Start Game</button>
+    </div>
+    <div >
+        <button class="btn" id="rule-button">Game Rules</button>
+    </div>
+    <div class="level" id="level">
+        <h1>Level</h1>
+        <button class="lvlbtn" id="Easy">Easy</button>
+        <button class="lvlbtn" id="Medium">Medium</button>
+        <button class="lvlbtn" id="Hard">Hard</button>
+        <p>Choose the level for Game</p>
+        <button class="btn" id="OGoBack-button">Go Back</button>
+    </div>
+    <div class="GameRules" id="GameRules">
+        <h2>!!Bingo Game Rules!!</h2>
+        <div>
+        <h3>Objective:</h3>
+        <p>The objective of the game is to be the first player to mark five numbers in a straight line (horizontal, vertical, or diagonal) on your board.</p>
+
+        <h3>Gameplay:</h3>
+        <h4>For Easy and Medium Level:</h4>
+        <p>1. You have a 5x5 Bingo board with numbers ranging from 1 to 25. Each number is randomly placed on the board.
+            <br>
+            2. Players take turns selecting numbers from their board and "cutting" them(Either you start the Match or Bot).
+            <br>
+            3. Click on a number to mark it. The goal is to form a straight line with five marked numbers.
+            <br>
+            4. Remember when another player marks a number, then you have to mark it on your board, Otherwise it will be your loss.
+            <br>
+            5. You can achieve a straight line horizontally, vertically, or diagonally.
+            <br>
+            6. The first player to complete a valid straight line of five marked numbers will be the winner!.
+        </p>
+        <h4>For Hard Level:</h4>
+        <p>1. You have a 5x5 Bingo board with numbers ranging from 1 to 25. Each number is randomly placed on the board.
+            <br>
+            2. Players take turns selecting numbers from their board and "cutting" them(Either you start the Match or Bot).
+            <br>
+            3. Click on a number to mark it. The goal is to form a five straight line with marked numbers.
+            <br>
+            4. Remember when another player marks a number, then you have to mark it on your board, Otherwise it will be your loss.
+            <br>
+            5. You can achieve a straight line horizontally, vertically, or diagonally.
+            <br>
+            6. The first player to complete a valid five straight line of marked numbers will be the winner!.
+        </p>
+        </div>
+        <h2>!!Enjoy the game and good luck!!</h2>
+        <button class="btn" id="RGoBack-button">Go Back</button>
+    
+    </div>
+    <div class="grid-container" id="grid-container">
+        <!-- Grid items go here -->
+    </div>
+    <div class="imageContainer1" id="imageContainer">
+    </div>
+    <div class="selectedNum" >
+        <div>
+            <div id="PlayerNum"></div>
+            <h3 id="fonthide1">You</h3> 
+        </div>   
+        <div>   
+            <div id="BotNum"></div>
+            <h3 id="fonthide2">Bot</h3>
+        </div>
+    </div>
+    <div  id="wordContainer">
+    </div>
+    <div >
+        <button class="btn" id="reset-button">Restart Game</button>
+    </div>
+    
+    
+    <!--<div  id="wordContainer1">
+        
+    </div>
+    <div id="clickXValue">Click X: </div>
+    <div id="clickYValue">Click Y: </div>
+    <div id="clicked-number">
+
+    </div>
+    -->
+    <!--<div class="grid-container1" id="grid-container1">
+    
+    </div>-->
+    
+    <script src="script.js"></script>
 </body>
 </html>
